@@ -2,23 +2,32 @@
 # https://help.github.com/en/articles/about-github-actions
 # https://help.github.com/en/articles/workflow-syntax-for-github-actions
 name: CI
-
-on: [push]
+on:
+  push:
+    branches: [master, dev/*]
+  pull_request:
+    branches: [master, dev/*]
 
 jobs:
   build:
+  
+
 
     # Machine environment:
     # https://help.github.com/en/articles/software-in-virtual-environments-for-github-actions#ubuntu-1804-lts
     # We specify the Node.js version manually below, and use versioned Chrome from Puppeteer.
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
+    
+    strategy:
+      matrix:
+        node-version: [16.x]
 
     steps:
-    - uses: actions/checkout@v1
-    - name: Use Node.js 16.14.2
+    - uses: actions/checkout@v2
+    - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v1
       with:
-        node-version: 12.8
+        node-version: ${{ matrix.node-version }}
     - name: Install dependencies
       run: npm install
     - name: Lint
