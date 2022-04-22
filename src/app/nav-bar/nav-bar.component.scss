@@ -1,4 +1,4 @@
-.toolbar {
+.NavBar {
   position: absolute;
   top: 0;
   left: 0;
@@ -6,26 +6,17 @@
   height: 60px;
   display: flex;
   align-items: center;
-  background-color: #1976d2;
+  background-color: gray;
   color: white;
   font-weight: 600;
 }
 
-.toolbar img {
+.NavBar img {
   margin: 0 16px;
 }
 
-.toolbar #twitter-logo {
+.NavBar #twitter-logo {
   height: 40px;
   margin: 0 8px;
 }
 
-.toolbar #youtube-logo {
-  height: 40px;
-  margin: 0 16px;
-}
-
-.toolbar #twitter-logo:hover,
-.toolbar #youtube-logo:hover {
-  opacity: 0.8;
-}
