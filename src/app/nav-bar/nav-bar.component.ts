@@ -7,9 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavBarComponent implements OnInit {
 
-  constructor() { }
-
-  ngOnInit(): void {
+  selector: boolean = false;
+  selectorDropdown() {
+    this.selector = !this.selector;
   }
+  selected: string = "";
+  isToggle: number = 1;
+  constructor() {}
+
+  ngOnInit(): void {}
 
 }
