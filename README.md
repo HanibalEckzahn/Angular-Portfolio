@@ -1,4 +1,9 @@
 ![example workflow](https://github.com/HanibalEckzahn/Angular-Portfolio/actions/workflows/codeql-analysis.yml/badge.svg)
+[![Npm package version](https://badgen.net/npm/v/express)](https://npmjs.com/package/express)
+[![GitHub license](https://badgen.net/github/license/Naereen/Strapdown.js)](https://github.com/Naereen/StrapDown.js/blob/master/LICENSE)
+[![GitHub commits](https://badgen.net/github/commits/Naereen/Strapdown.js)](https://GitHub.com/Naereen/StrapDown.js/commit/)
+
+
 # Test
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.3.
@@ -26,3 +31,5 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+[![Naereen's top languages](https://github-readme-stats.vercel.app/api/top-langs/?username=Naereen&theme=blue-green)](https://github.com/anuraghazra/github-readme-stats)
