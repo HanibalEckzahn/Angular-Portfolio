@@ -9,16 +9,6 @@ import emailjs, { EmailJSResponseStatus } from '@emailjs/browser'
 })
 export class KontaktComponent  {
 
-  
 
-  public sendEmail(e: Event){
-    e.preventDefault();
-    console.log("EmailSend aufgerufen");
-    emailjs.sendForm('service_mfunuhk', 'template_kc736lz', e.target as HTMLFormElement, 'user_7JmFWIo3hl8vVMU6YOOld').then((result: EmailJSResponseStatus) =>{
-      console.log(result.text);
-    }, (error) => {
-      console.log(error.text);
-    });
-  }
 }
 

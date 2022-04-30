@@ -9,6 +9,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { KontaktComponent } from './kontakt/kontakt.component';
 import { AboutmeComponent } from './aboutme/aboutme.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
+import { ImpressumComponent } from './impressum/impressum.component';
+import { DatenschutzComponent } from './datenschutz/datenschutz.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import { PortfolioComponent } from './portfolio/portfolio.component';
     FooterComponent,
     KontaktComponent,
     AboutmeComponent,
-    PortfolioComponent
+    PortfolioComponent,
+    ImpressumComponent,
+    DatenschutzComponent
   ],
   imports: [
     BrowserModule,
