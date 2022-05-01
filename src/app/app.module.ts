@@ -11,6 +11,7 @@ import { AboutmeComponent } from './aboutme/aboutme.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
 import { ImpressumComponent } from './impressum/impressum.component';
 import { DatenschutzComponent } from './datenschutz/datenschutz.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { DatenschutzComponent } from './datenschutz/datenschutz.component';
     AboutmeComponent,
     PortfolioComponent,
     ImpressumComponent,
-    DatenschutzComponent
+    DatenschutzComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

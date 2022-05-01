@@ -7,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavBarComponent implements OnInit {
 
+  colorText:string= '';
+  colorfocus:string = 'focus:ring-gray-800';
+
   selector: boolean = false;
   selectorDropdown() {
     this.selector = !this.selector;
