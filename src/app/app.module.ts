@@ -12,6 +12,7 @@ import { PortfolioComponent } from './portfolio/portfolio.component';
 import { ImpressumComponent } from './impressum/impressum.component';
 import { DatenschutzComponent } from './datenschutz/datenschutz.component';
 import { HomeComponent } from './home/home.component';
+import { FournullfourComponent } from './fournullfour/fournullfour.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { HomeComponent } from './home/home.component';
     PortfolioComponent,
     ImpressumComponent,
     DatenschutzComponent,
-    HomeComponent
+    HomeComponent,
+    FournullfourComponent
   ],
   imports: [
     BrowserModule,
