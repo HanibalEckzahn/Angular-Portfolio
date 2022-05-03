@@ -14,7 +14,7 @@ export class NavBarComponent implements OnInit {
   selectorDropdown() {
     this.selector = !this.selector;
   }
-  selected: string = "home";
+  selected: string = " Home";
   isToggle: number = 1;
   constructor() {}
 
