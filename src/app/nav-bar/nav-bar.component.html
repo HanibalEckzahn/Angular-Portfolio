@@ -11,11 +11,10 @@
       <!-- For medium and plus sized devices -->
       <div class=" ml">
       <ul class="hidden md:flex flex-auto Dienstleistungen-x-2">
-        <li (click)="isToggle = 1" [ngClass]="'focus:outline-none focus:ring-2 focus:ring-offset-2 {{ colorfocus}} cursor-pointer px-3 py-2.5 font-normal text-xs leading-3 shadow-md rounded ' + (isToggle === 1 ? 'text-white bg-cyan-600' : 'text-gray-600 border border-white bg-gray-50')">Home</li>
-        <li (click)="isToggle = 2" [ngClass]="'focus:outline-none focus:ring-2 focus:ring-offset-2 {{ colorfocus}} cursor-pointer px-3 py-2.5 font-normal text-xs leading-3 shadow-md rounded ' + (isToggle === 2 ? 'text-white bg-cyan-600' : 'text-gray-600 border border-white bg-gray-50')">Dienstleistungen</li>
-        <li (click)="isToggle = 3" [ngClass]="'focus:outline-none focus:ring-2 focus:ring-offset-2 {{ colorfocus}} cursor-pointer px-3 py-2.5 font-normal text-xs leading-3 shadow-md rounded ' + (isToggle === 3 ? 'text-white bg-cyan-600' : 'text-gray-600 border border-white bg-gray-50')">Portfolio</li>
-        <li (click)="isToggle = 4" [ngClass]="'focus:outline-none focus:ring-2 focus:ring-offset-2 {{ colorfocus}} cursor-pointer px-3 py-2.5 font-normal text-xs leading-3 shadow-md rounded ' + (isToggle === 4 ? 'text-white bg-cyan-600' : 'text-gray-600 border border-white bg-gray-50')">Über Mich</li>
-        <li (click)="isToggle = 5" [ngClass]="'focus:outline-none focus:ring-2 focus:ring-offset-2{{ colorfocus}} cursor-pointer px-3 py-2.5 font-normal text-xs leading-3 shadow-md rounded ' + (isToggle === 5 ? 'text-white bg-cyan-600' : 'text-gray-600 border border-white bg-gray-50')">Kontakt</li>
+        <li (click)="isToggle = 1" [ngClass]="'focus:outline-none focus:ring-2 focus:ring-offset-2 {{ colorfocus}} cursor-pointer px-3 py-2.5 font-normal text-xs leading-3 shadow-md rounded ' + (isToggle === 1 ? 'text-white bg-cyan-600' : 'text-gray-600 border border-white bg-gray-50')" [routerLink]="['']">Home</li>
+        <li (click)="isToggle = 4" [ngClass]="'focus:outline-none focus:ring-2 focus:ring-offset-2 {{ colorfocus}} cursor-pointer px-3 py-2.5 font-normal text-xs leading-3 shadow-md rounded ' + (isToggle === 4 ? 'text-white bg-cyan-600' : 'text-gray-600 border border-white bg-gray-50')"[routerLink]="['']"fragment="aboutme">Über Mich</li>
+        <li (click)="isToggle = 3" [ngClass]="'focus:outline-none focus:ring-2 focus:ring-offset-2 {{ colorfocus}} cursor-pointer px-3 py-2.5 font-normal text-xs leading-3 shadow-md rounded ' + (isToggle === 3 ? 'text-white bg-cyan-600' : 'text-gray-600 border border-white bg-gray-50')"[routerLink]="['']"fragment="portfolio">Portfolio</li>
+        <li (click)="isToggle = 5" [ngClass]="'focus:outline-none focus:ring-2 focus:ring-offset-2{{ colorfocus}} cursor-pointer px-3 py-2.5 font-normal text-xs leading-3 shadow-md rounded ' + (isToggle === 5 ? 'text-white bg-cyan-600' : 'text-gray-600 border border-white bg-gray-50')" [routerLink]="['']"fragment="kontakt">Kontakt</li>
 
       </ul>
     </div>
@@ -36,10 +35,9 @@
       <div class="relative">
         <ul [ngClass]="'font-normal text-base leading-4 absolute top-2 w-full rounded shadow-md ' + (selector ? 'block' : 'hidden')">
           <li (click)="selected = 'Home'; selectorDropdown()" class="px-4 py-3 text-gray-600 bg-gray-50 border border-gray-50 focus:outline-none focus:bg-gray-100 hover:bg-gray-100 duration-100 cursor-pointer text-xs leading-3 font-normal">Home</li>
-          <li (click)="selected = 'Dienstleistungen'; selectorDropdown()" class="px-4 py-3 text-gray-600 bg-gray-50 border border-gray-50 focus:outline-none focus:bg-gray-100 hover:bg-gray-100 duration-100 cursor-pointer text-xs leading-3 font-normal">Dienstleistungen</li>
-          <li (click)="selected = 'Portfolio'; selectorDropdown()" class="px-4 py-3 text-gray-600 bg-gray-50 border border-gray-50 focus:outline-none focus:bg-gray-100 hover:bg-gray-100 duration-100 cursor-pointer text-xs leading-3 font-normal">Portfolio</li>
-          <li (click)="selected = 'Über Mich'; selectorDropdown()" class="px-4 py-3 text-gray-600 bg-gray-50 border border-gray-50 focus:outline-none focus:bg-gray-100 hover:bg-gray-100 duration-100 cursor-pointer text-xs leading-3 font-normal">Über Mich</li>
-          <li (click)="selected = 'Kontakt'; selectorDropdown()" class="px-4 py-3 text-gray-600 bg-gray-50 border border-gray-50 focus:outline-none focus:bg-gray-100 hover:bg-gray-100 duration-100 cursor-pointer text-xs leading-3 font-normal">Kontakt</li>
+          <li (click)="selected = 'Über Mich'; selectorDropdown()" class="px-4 py-3 text-gray-600 bg-gray-50 border border-gray-50 focus:outline-none focus:bg-gray-100 hover:bg-gray-100 duration-100 cursor-pointer text-xs leading-3 font-normal"[routerLink]="['']"fragment="aboutme">Über Mich</li>
+          <li (click)="selected = 'Portfolio'; selectorDropdown()" class="px-4 py-3 text-gray-600 bg-gray-50 border border-gray-50 focus:outline-none focus:bg-gray-100 hover:bg-gray-100 duration-100 cursor-pointer text-xs leading-3 font-normal"[routerLink]="['']"fragment="portfolio">Portfolio</li>
+          <li (click)="selected = 'Kontakt'; selectorDropdown()" class="px-4 py-3 text-gray-600 bg-gray-50 border border-gray-50 focus:outline-none focus:bg-gray-100 hover:bg-gray-100 duration-100 cursor-pointer text-xs leading-3 font-normal" [routerLink]="['']"fragment="kontakt">Kontakt</li>
         </ul>
       </div>
     </div>

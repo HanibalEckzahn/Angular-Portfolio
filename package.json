@@ -1,6 +1,6 @@
 {
-  "name": "test",
-  "version": "0.0.0",
+  "name": "portfolio",
+  "version": "0.0.2",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -44,5 +44,20 @@
     "postcss": "^8.4.12",
     "tailwindcss": "^3.0.24",
     "typescript": "~4.6.2"
-  }
+  },
+  "description": "![example workflow](https://github.com/HanibalEckzahn/Angular-Portfolio/actions/workflows/codeql-analysis.yml/badge.svg)\r [![Npm package version](https://badgen.net/npm/v/express)](https://npmjs.com/package/express)\r [![GitHub license](https://badgen.net/github/license/Naereen/Strapdown.js)](https://github.com/Naereen/StrapDown.js/blob/master/LICENSE)\r [![GitHub commits](https://badgen.net/github/commits/Naereen/Strapdown.js)](https://GitHub.com/Naereen/StrapDown.js/commit/)\r [![GitHub branches](https://badgen.net/github/branches/Naereen/Strapdown.js)](https://github.com/Naereen/Strapdown.js/)",
+  "main": "karma.conf.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HanibalEckzahn/Angular-Portfolio.git"
+  },
+  "keywords": [
+    "angular"
+  ],
+  "author": "Hannes Habermann",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/HanibalEckzahn/Angular-Portfolio/issues"
+  },
+  "homepage": "https://github.com/HanibalEckzahn/Angular-Portfolio#readme"
 }

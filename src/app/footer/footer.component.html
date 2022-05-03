@@ -5,12 +5,12 @@
   <div class="">
       <div class="md:flex  ">
           <div class="m-10 ">
-              <a href="localhost/#">
-              <p class="" >© Habermann 2022</p>
+              <a [routerLink]="['']">
+              <p  >© Habermann 2022</p>
             </a>
           </div>
           <div class="m-10 text-white ml">
-              <div class="">
+              <div >
                   <a class="m-8" target="_blank" href="https://twitter.com/H4nn3s_">
                       <fa-icon [icon]="tw"></fa-icon>
                   </a>
@@ -26,13 +26,13 @@
               </div>
           </div>
           <div class="m-10 ">
-              <a class="footer-link" href="/datenschutz">
-                  <p class="" href="/datenschutz">Datenschutz</p>
+              <a class="footer-link" [routerLink]="['datenschutz']">
+                  <p >Datenschutz</p>
               </a>
           </div>
           <div class="m-10">
-              <a class="footer-link" href="/impressum">
-                  <p class="" href="/impressum" >Impressum</p>
+              <a class="footer-link" [routerLink]="['impressum']">
+                  <p   >Impressum</p>
               </a>
               </div>
       </div>
