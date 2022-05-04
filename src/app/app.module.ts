@@ -13,6 +13,7 @@ import { ImpressumComponent } from './impressum/impressum.component';
 import { DatenschutzComponent } from './datenschutz/datenschutz.component';
 import { HomeComponent } from './home/home.component';
 import { FournullfourComponent } from './fournullfour/fournullfour.component';
+import { ProjektcardComponent } from './projektcard/projektcard.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { FournullfourComponent } from './fournullfour/fournullfour.component';
     ImpressumComponent,
     DatenschutzComponent,
     HomeComponent,
-    FournullfourComponent
+    FournullfourComponent,
+    ProjektcardComponent
   ],
   imports: [
     BrowserModule,
