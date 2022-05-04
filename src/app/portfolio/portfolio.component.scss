@@ -1,0 +1,16 @@
+#portfolio{
+  margin-top: 0,1rem;
+  margin-bottom: 0,1rem;
+}
+@media screen and (max-width: 767px) {
+  #portfolio {
+    padding-bottom: 20rem;
+    padding-top: 20rem;
+  }
+}
+@media screen and (max-width: 435px) {
+  #portfolio {
+    padding-bottom: 23rem;
+    padding-top: 20rem;
+  }
+}
