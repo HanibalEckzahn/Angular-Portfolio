@@ -6,48 +6,23 @@
         <p class="text-base leading-6 text-center text-gray-600 sm:w-96 md:w-9/12 lg:w-5/12 mt-4">Meine Bisherigen Porjekte </p>
     </div>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 lg:gap-x-8 md:gap-6 gap-4 lg:mt-12 md:mt-9 mt-6">
-        <div class="relative flex items-center justify-center">
-            <img src="../../assets/bilder/roomba.jpg" alt="roomba630" />
-            <div class="absolute top-0 flex flex-col w-80 md:w-80 lg:w-80 xl:w-96 h-full items-center justify-between py-10">
-                <div class="flex items-center justify-center flex-col h-full">
-                    <h2 class="xl:px-10 md:px-2 px-7 text-2xl font-semibold leading-normal text-center text-white">Roomba 630 Smart gemacht</h2>
-                    <p class="xl:px-10 md:px-2 px-7 text-base leading-normal text-center text-white mt-4">Ich habe dem alten Roomba 630 einen ESP8266 verbaut um in in mein Smarthome einzubinden</p>
-                </div>
-                <div class="px-4 md:w-auto w-full">
-                  <a target="_blank" href="https://github.com/HanibalEckzahn/Roomba-630">
-                    <button class="focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 w-full hover:bg-gray-300 transition duration-150 text-base font-medium leading-none text-center text-gray-800 py-4 px-12 bg-white focus:outline-none">Erfahre mehr</button>
-                  </a>
-                </div>
-            </div>
-        </div>
-        <div class="relative flex items-center justify-center">
-            <img src="https://i.ibb.co/w04zsMJ/img-2.png" alt="chair" />
-            <div class="absolute top-0 flex flex-col w-80 md:w-80 lg:w-80 xl:w-96 h-full items-center justify-between py-10">
-                <div class="flex items-center justify-center flex-col h-full">
-                    <h2 class="xl:px-10 md:px-2 px-7 text-2xl font-semibold leading-7 lg:leading-7 text-center text-white">Portfolio webseite</h2>
-                    <p class="xl:px-10 md:px-2 px-7 text-base leading-normal text-center text-white mt-4">Mein Portfolio Webseite erst in HTML, CSS und in Bootstrap. Und jetzt in Angular.</p>
-                </div>
-                <div class="px-4 md:w-auto w-full">
-                  <a target="_blank" href="https://github.com/HanibalEckzahn/Angular-Portfolio">
-                    <button class="focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 w-full hover:bg-gray-300 transition duration-150 text-base font-medium leading-none text-center text-gray-800 py-4 px-12 bg-white focus:outline-none">Erfahre mehr</button>
-                  </a>
-                </div>
-            </div>
-        </div>
-        <div class="relative flex items-center justify-center">
-            <img src="https://i.ibb.co/3ctkDMB/img-3.png" alt="chair" />
-            <div class="absolute top-0 flex flex-col w-80 md:w-80 lg:w-80 xl:w-96 h-full items-center justify-between py-10">
-                <div class="flex items-center justify-center flex-col h-full">
-                    <h2 class="xl:px-10 md:px-2 px-7 text-2xl font-semibold sm:w-auto leading-normal text-center text-white">Kleinere Projekte </h2>
-                    <p class="xl:px-10 md:px-2 px-7 text-base leading-normal text-center text-white mt-4">Kleine Projekte in Python siehe Github</p>
-                </div>
-                <div class="px-4 md:w-auto w-full">
-                  <a target="_blank" href="https://github.com/HanibalEckzahn">
-                    <button class="focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 w-full hover:bg-gray-300 transition duration-150 text-base font-medium leading-none text-center text-gray-800 py-4 px-12 bg-white focus:outline-none">Erfahre mehr</button>
-                  </a>
-                </div>
-            </div>
-        </div>
+
+
+
+        <div class="relative flex items-center justify-center" *ngFor="let card of cards">
+          <img src="{{card.img}}" alt="{{card.imgalt}}" />
+          <div class="absolute top-0 flex flex-col w-80 md:w-80 lg:w-80 xl:w-96 h-full items-center justify-between py-10">
+              <div class="flex items-center justify-center flex-col h-full">
+                  <h2 class="xl:px-10 md:px-2 px-7 text-2xl font-semibold leading-normal text-center {{card.textcolor}}">{{card.title}}</h2>
+                  <p class="xl:px-10 md:px-2 px-7 text-base leading-normal text-center {{card.textcolor}} mt-4">{{card.text}}</p>
+              </div>
+              <div class="px-4 md:w-auto w-full">
+                <a target="_blank" href="{{card.buttonlink}}">
+                  <button class="focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 w-full hover:bg-gray-300 transition duration-150 text-base font-medium leading-none text-center text-gray-800 py-4 px-12 bg-white focus:outline-none">Erfahre Sie mehr!</button>
+                </a>
+              </div>
+          </div>
+      </div>
     </div>
 </div>
 
