@@ -13,3 +13,14 @@
   padding-top: 15rem;
   padding-left: 10rem;
 }
+
+@media screen and (max-width: 767px) {
+  .img-div {
+    padding-bottom: 20rem;
+  }
+}
+@media screen and (max-width: 435px) {
+  .img-div {
+    padding-bottom: 23rem;
+  }
+}
