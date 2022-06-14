@@ -14,6 +14,7 @@ import { DatenschutzComponent } from './datenschutz/datenschutz.component';
 import { HomeComponent } from './home/home.component';
 import { FournullfourComponent } from './fournullfour/fournullfour.component';
 import { ProjektcardComponent } from './projektcard/projektcard.component';
+import { ProjektPostComponent } from './projekt-post/projekt-post.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { ProjektcardComponent } from './projektcard/projektcard.component';
     DatenschutzComponent,
     HomeComponent,
     FournullfourComponent,
-    ProjektcardComponent
+    ProjektcardComponent,
+    ProjektPostComponent
   ],
   imports: [
     BrowserModule,
