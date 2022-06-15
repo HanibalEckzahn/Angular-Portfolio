@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { BlogService } from '../blog.service';
-import { NgxSpinnerService } from 'ngx-spinner';
+
 import { ActivatedRoute } from '@angular/router';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-projekt-post',
@@ -9,35 +10,16 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./projekt-post.component.scss']
 })
 export class ProjektPostComponent implements OnInit {
-  id!: string;
-  singlePost: any;
-  errorMessage: any;
-  constructor(
-    private route: ActivatedRoute,
-    private blogService: BlogService,
-    private spinner: NgxSpinnerService) { }
+  posts: any;
+  constructor(public http: HttpClient) {
 
-  ngOnInit(): void {
-    this.id = this.route.snapshot.paramMap.get('id') as string;
-    console.log(this.id);
+   //Rest API Calling
+    this.http.get('https://admin.habermann-j.de/wp-json/wp/v2/posts/').subscribe(data => {
+      this.posts = data;
+      console.log(this.posts);
 
-    this.getSinglePost();
+    });
   }
-  getSinglePost() {
-    this.spinner.show();
-    this.blogService.getSinglePost(this.id).subscribe(
-      (data) => {
-        // Try to run this code
-        this.singlePost = data;
-        console.log(this.singlePost);
-        this.spinner.hide();
-      },
-      (error) => {
-        // if any error, Code throws the error
-        this.errorMessage = error.error.message;
-        console.log(error.error.message, 'error');
-        this.spinner.hide();
-      }
-    );
+  ngOnInit() {
   }
 }

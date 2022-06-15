@@ -15,6 +15,7 @@ import { HomeComponent } from './home/home.component';
 import { FournullfourComponent } from './fournullfour/fournullfour.component';
 import { ProjektcardComponent } from './projektcard/projektcard.component';
 import { ProjektPostComponent } from './projekt-post/projekt-post.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { ProjektPostComponent } from './projekt-post/projekt-post.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
