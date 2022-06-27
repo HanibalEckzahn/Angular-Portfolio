@@ -15,23 +15,27 @@ export class BlogService {
   private url = 'https://admin.habermann-j.de/';
 
 
+
   constructor(private http:HttpClient) { }
 
   getPost(){
-    const url = `${this.url}/wp-json/wp/v2/posts`;
-    console.log(url);
-    return this.http.get(url).pipe(catchError(this.errorHandler));
-  }
-  getSinglePost(id: any) {
-    const url = `${this.url}/wp-json/wp/v2/posts/${id}`;
-    console.log(url);
-    return this.http.get(url).pipe(catchError(this.errorHandler));
+    const url = `${this.url}wp-json/wp/v2/posts/`;
+    return this.http.get(url).pipe(catchError(this.handleError));
   }
 
-  errorHandler(error: HttpErrorResponse) {
-    return new Observable((observer: Observer<any>) => {
-      observer.error(error);
+  //Error handling
+  handleError(error: any){
+    let errorMessage = '';
+    if(error.error instanceof ErrorEvent){
+      //Get client-side Error
+      errorMessage = error.error.errorMessage;
+    }else{
+      // Get server-side error
+      errorMessage = `Error Code: ${error.status}\nMessage: ${error.message}`;
+    }
+    window.alert(errorMessage);
+    return throwError(()=>{
+      return errorMessage;
     });
   }
-
 }

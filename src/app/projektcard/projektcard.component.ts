@@ -1,9 +1,9 @@
 import { BlogService } from './../blog.service';
 import { Component, OnInit } from '@angular/core';
-import { NgxSpinnerService } from 'ngx-spinner';
+import { throwError } from 'rxjs';
+import { HttpHeaders } from '@angular/common/http';
 
 
-//TODO Admin page erreichbar machen .htacces?
 
 @Component({
   selector: 'app-projektcard',
@@ -13,12 +13,30 @@ import { NgxSpinnerService } from 'ngx-spinner';
 export class ProjektcardComponent implements OnInit {
   isToggle: any;
 
+  public datas:any = [];
+  public test:any = [];
+
   id!: string;
   singlePost: any;
   errorMessage: any;
 
+  public httpOptions = {
+    headers: new HttpHeaders({
+      'Content-Type': 'application/json',
+    }),
+  };
+
 
   card = [
+    {
+      title: 'Portfolio Webseite',
+      text: 'Mein Portfolio Webseite erst in HTML, CSS und in Bootstrap. Und jetzt in Angular.',
+      text2: 'lorem ipson',
+      textcolor: 'text-white',
+      buttonlink: 'https://github.com/HanibalEckzahn/Angular-Portfolio',
+      img: '../../assets/bilder/webseite-new.png',
+      imgalt: 'website'
+    },
     {
       title: 'Portfolio Webseite',
       text: 'Mein Portfolio Webseite erst in HTML, CSS und in Bootstrap. Und jetzt in Angular.',
@@ -32,29 +50,27 @@ export class ProjektcardComponent implements OnInit {
 
 
   constructor(
-    private blogService: BlogService,
-    private spinner: NgxSpinnerService){}
+    private api: BlogService){}
 
   ngOnInit(): void {
     this.getPosts();
   }
 
   getPosts() {
-    this.spinner.show();
+    return this.api.getPost().subscribe((data: {}) => {
+      this.test = data;
+      console.log(data);
+      console.log(this.test['0']);
+      this.test.pop();
 
-    this.blogService.getPost().subscribe(
-      (data) => {
-        this.getPosts = data;
-        console.log(this.getPosts);
-        this.spinner.hide();
-      },
-      (error) => {
-        // if any error, Code throws the error
-        this.errorMessage = error.error.message;
-        console.log(error.error.message, 'error');
-        this.spinner.hide();
+      for (var i = 0; i < this.test.length; i++){
+        var obj = this.test[i];
+        console.log("In der For: ",this.test)
+        this.datas.push(this.test)
+        console.log(this.datas)
       }
-    );
+    });
   }
+
 
 }

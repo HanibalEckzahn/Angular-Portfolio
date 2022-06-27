@@ -1,15 +1,15 @@
-//TODO ng Schleife für die Post
+//TODO Daten anzeigen lassen
 
 
 <section id="content" class="content">
-  <div class="mt-10 md:flex items-start justify-center py-12 2xl:px-20 md:px-6 px-4" *ngFor="let card of card">
+  <div class="mt-10 md:flex items-start justify-center py-12 2xl:px-20 md:px-6 px-4" *ngFor="let card of datas">
     <div class="xl:w-2/6 lg:w-2/5 w-80 md:block hidden">
         <img class="w-full" alt="{{card.imgalt}}" src="{{card.img}}" />
         <img class="mt-6 w-full" alt="{{card.imgalt}}" src="{{card.img}}" />
     </div>
     <div class="xl:w-2/5 md:w-1/2 lg:ml-8 md:ml-6 md:mt-0 mt-6">
         <div class="border-b border-gray-200 pb-6">
-            <p class="text-sm leading-none text-gray-600">{{card.title}}</p>
+            <p class="text-sm leading-none text-gray-600">{{card.title['rendered']}}</p>
             <h1 class="lg:text-2xl text-xl font-semibold lg:leading-6 leading-7 text-gray-800 mt-2">{{card.text}}</h1>
         </div>
         <div>

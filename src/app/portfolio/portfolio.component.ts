@@ -33,7 +33,6 @@ export class PortfolioComponent implements OnInit {
       imgalt: 'staubsuager'
     }
   ];
-//TODO bilder komprimieren (https://material.angular.io/cdk/layout/overview)
 
   constructor() { }
 
